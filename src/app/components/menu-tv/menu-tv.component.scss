@@ -1,0 +1,52 @@
+@import 'src/variables';
+
+.menu-container {
+    background-color: $base-color;
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    justify-content: center;
+    color: #CCC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1em;
+}
+
+.menu-container ul {
+    width: 100%;
+    display: inline-flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu-container .item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em 1em 2em;
+    border: 2px solid white;
+    border-radius: 8px;
+    margin-right: 1em;
+}
+
+.item-container:hover {
+    cursor: pointer;
+    background: $base-color-light;
+}
+
+//.menu-container .item-container p {
+    //display: none;
+    //visibility: hidden;
+    //opacity: 0;
+    //transition: visibility 0s, opacity 0.5s linear;
+//}
+/*
+.menu-container .item-container:hover p {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}*/
