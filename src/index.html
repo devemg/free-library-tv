@@ -30,7 +30,7 @@
             left: '',
             right: '',
             up: '',
-            down: '@carousel'
+            //down: '@carousel, @details'
           }
         });
 
@@ -39,6 +39,11 @@
           enterTo: 'last-focused',
         });
  
+        SpatialNavigation.add('details', {
+          selector: '.focusable',
+          enterTo: 'last-focused',
+        });
+
       // EVENTS 
       var eventHandler = function(evt) {
           console.log(evt.type);

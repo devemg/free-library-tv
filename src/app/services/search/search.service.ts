@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { hpSearch } from './dummy-data/harry-potter-search';
 import { LORSearch } from './dummy-data/lord-of-rings';
@@ -9,7 +10,7 @@ import { ISearchResultModel } from './search.model';
 })
 export class SearchService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   /**
    * Search by text 
@@ -35,6 +36,10 @@ export class SearchService {
         break;
       }
     });
+  }
+
+  getDetail(isbn: string | number) {
+    return this.http.get(`https://openlibrary.org/isbn/${isbn}.json`);
   }
 
 }

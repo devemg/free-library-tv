@@ -1,1 +1,12 @@
-<p>details works for {{id}}!</p>
+<div id="details" class="details" *ngIf="data" >
+    <button class="focusable" (click)="goBack()"> Go Back </button>
+    <h1 class="focusable">{{data.title}}</h1>
+    <p *ngIf="data.description">{{data.description.value}}</p>
+<div *ngIf="data.subjects">
+    <h2>Subjects</h2>
+    <ul>
+        <li class="focusable" *ngFor="let item of data.subjects">{{item}}</li>
+    </ul>
+    
+</div>
+</div>

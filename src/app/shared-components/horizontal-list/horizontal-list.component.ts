@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ISingleCard } from '../single-card/single-card.model';
 import { IHorizontalList } from './horizontal-list.model';
 
 @Component({
