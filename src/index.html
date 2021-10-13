@@ -30,8 +30,12 @@
             left: '',
             right: '',
             up: '',
-            down: ''
           }
+        });
+
+        SpatialNavigation.add('carousel', {
+          selector: '.container-card-list .item-container',
+          enterTo: 'last-focused',
         });
  
       // Make the *currently existing* navigable elements focusable.
