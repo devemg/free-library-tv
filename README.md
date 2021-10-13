@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
+Using spatial navigation with [js-spatial navigation by luke-chang](https://github.com/luke-chang/js-spatial-navigation)
+
+[DEMOS](https://luke-chang.github.io/js-spatial-navigation/demo/)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

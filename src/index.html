@@ -11,7 +11,7 @@
       // Initialize
       SpatialNavigation.init();
  
-      // Define navigable elements (anchors and elements with "focusable" class).
+      // Define navigable elements
       SpatialNavigation.add('menu', {
           selector: '.menu-container .item-container',
           enterTo: 'last-focused',
@@ -30,6 +30,7 @@
             left: '',
             right: '',
             up: '',
+            down: '@carousel'
           }
         });
 
@@ -38,6 +39,24 @@
           enterTo: 'last-focused',
         });
  
+      // EVENTS 
+      var eventHandler = function(evt) {
+          console.log(evt.type);
+        };
+
+        //window.addEventListener('sn:navigatefailed', eventHandler);
+        //window.addEventListener('sn:willmove', eventHandler);
+        //window.addEventListener('sn:willunfocus', eventHandler);
+        //window.addEventListener('sn:unfocused', eventHandler);
+        //window.addEventListener('sn:willfocus', eventHandler);
+        //window.addEventListener('sn:focused', eventHandler);
+        //window.addEventListener('sn:enter-down', eventHandler);
+        window.addEventListener('sn:enter-up', function(evt) {
+          console.log(evt.target);
+          evt.target.click();
+        });
+        //window.addEventListener('sn:navigatefailed', eventHandler);
+
       // Make the *currently existing* navigable elements focusable.
       SpatialNavigation.makeFocusable();
  

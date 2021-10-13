@@ -13,4 +13,7 @@ export class SingleCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToDetail(): void {
+    console.log('GO TO DETAIL OF ', this.item?.title);
+  }
 }

@@ -1,4 +1,4 @@
-<div *ngIf="item" class="item-container">
+<div *ngIf="item" class="item-container" (click)="goToDetail()">
     <img *ngIf="item.image" [src]="item.image" class="cover" />
     <div class="cover placeholder-img" *ngIf="!item.image"></div>
 </div>
