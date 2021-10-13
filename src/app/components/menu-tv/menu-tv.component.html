@@ -1,6 +1,6 @@
 <div id="menu" class="menu-container">
     <ul>
-        <li *ngFor="let item of menuItems">
+        <li *ngFor="let item of menuItems" (click)="onClick(item.title)">
             <div class="item-container" [ngClass]="'icon-'+item.icon">
                 <p>{{item.title}}</p>
             </div>

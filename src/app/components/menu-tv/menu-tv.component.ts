@@ -34,4 +34,8 @@ export class MenuTvComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(value: string): void {
+    console.log('click or enter on ', value);
+  }
+
 }

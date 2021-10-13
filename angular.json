@@ -33,7 +33,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/spatial-navigation-js/spatial_navigation.js"
+            ]
           },
           "configurations": {
             "production": {

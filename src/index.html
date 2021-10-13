@@ -6,6 +6,41 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    window.addEventListener('load', function() {
+      // Initialize
+      SpatialNavigation.init();
+ 
+      // Define navigable elements (anchors and elements with "focusable" class).
+      SpatialNavigation.add('menu', {
+          selector: '.menu-container .item-container',
+          enterTo: 'last-focused',
+
+          // This config specifies which element will be focused next when user
+          // press the specified key and intends to leave the current section.
+          //
+          // It should be an object contains "left", "right", "up" and "down"
+          // properties. The valid value of each property can be a jQuery
+          // selector string, jQuery object or standard DOM element. Also, you
+          // can use "@{sectionId}" to specify another section. Any of these
+          // properties can be omitted and SpatialNavigation will follow the
+          // original rule to navigate. However, if you assign an empty string,
+          // it makes SpatialNavigation go nowhere at that direction.
+          leaveFor: {
+            left: '',
+            right: '',
+            up: '',
+            down: ''
+          }
+        });
+ 
+      // Make the *currently existing* navigable elements focusable.
+      SpatialNavigation.makeFocusable();
+ 
+      // Focus the first navigable element.
+      SpatialNavigation.focus();
+    });
+  </script>
 </head>
 <body>
   <app-root></app-root>

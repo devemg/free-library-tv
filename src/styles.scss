@@ -14,6 +14,10 @@ body {
     width: 0.5vw;
     height: auto;
 }
+
+*:focus {
+    outline: 3px solid red;
+  }
 /*
 .icon-home {
     @extend .icon;
