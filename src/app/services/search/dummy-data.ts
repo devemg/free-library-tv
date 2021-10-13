@@ -1,4 +1,6 @@
-export const dummySearch = {
+import { ISearchResultModel } from "./search.model";
+
+export const dummySearch: ISearchResultModel = {
     "numFound": 1428,
     "start": 0,
     "numFoundExact": true,

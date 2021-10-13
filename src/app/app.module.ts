@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MenuTvComponent } from './menu-tv/menu-tv.component';
-import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
   ],
   imports: [
     BrowserModule,
-    SharedComponentsModule,
     AppRoutingModule
   ],
   providers: [],

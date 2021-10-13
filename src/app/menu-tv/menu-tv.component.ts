@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from './menu-item.model';
+import { IMenuItem } from './menu-item.model';
 
 @Component({
   selector: 'app-menu-tv',
@@ -7,7 +7,7 @@ import { MenuItem } from './menu-item.model';
   styleUrls: ['./menu-tv.component.scss']
 })
 export class MenuTvComponent implements OnInit {
-  menuItems: MenuItem[] = [
+  menuItems: IMenuItem[] = [
     {
       icon: 'emoji_events',
       title: 'Sports'
