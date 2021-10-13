@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.searchService.search('').then((res) => {
       this.searchq1List = this.adapter.getSingleCardList(res);
-      console.log(this.searchq1List);
     }); 
   }
 
