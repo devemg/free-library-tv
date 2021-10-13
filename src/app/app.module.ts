@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { MenuTvComponent } from './components/menu-tv/menu-tv.component';
-import { ExitOnAppComponent } from './components/modals/exit-on-app/exit-on-app.component';
+import { MenuTvComponent } from './menu-tv/menu-tv.component';
+import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuTvComponent,
-    ExitOnAppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
