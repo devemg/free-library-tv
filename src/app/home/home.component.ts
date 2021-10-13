@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataAdapterService } from '../services/data-adapter/data-adapter.service';
 import { SearchService } from '../services/search/search.service';
 import { IHorizontalList } from '../shared-components/horizontal-list/horizontal-list.model';
-
+declare var SpatialNavigation: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
       });
     })
     .catch((err) => console.error(err)); 
+    SpatialNavigation.focus('menu');
   }
 
 }

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataAdapterService } from 'src/app/services/data-adapter/data-adapter.service';
 import { SearchService } from 'src/app/services/search/search.service';
-import { IHorizontalList } from 'src/app/shared-components/horizontal-list/horizontal-list.model';
-
+declare var SpatialNavigation: any;
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -29,6 +28,7 @@ export class DetailsComponent implements OnInit {
         }))
       };*/
     });
+    SpatialNavigation.focus('menu');
   }
 
   goBack(): void {
