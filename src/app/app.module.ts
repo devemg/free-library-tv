@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MenuTvComponent } from './menu-tv/menu-tv.component';
@@ -12,7 +14,8 @@ import { SharedComponentsModule } from './shared-components/shared-components.mo
   ],
   imports: [
     BrowserModule,
-    SharedComponentsModule
+    SharedComponentsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
