@@ -10,23 +10,28 @@ export class MenuTvComponent implements OnInit {
   menuItems: IMenuItem[] = [
     {
       icon: 'emoji_events',
-      title: 'Sports'
+      title: 'Sports',
+      route:'Drama'
     },
     {
       icon: 'movie_creation',
-      title: 'movies',
+      title: 'Bio',
+      route: 'bio'
     },
     {
       icon: 'home',
       title: 'Home',
+      route: 'home'
     },
     {
       icon: 'star',
-      title: 'To Watch'
+      title: 'To Read',
+      route:'to-read'
     }, 
     {
       icon: 'settings_suggest',
       title: 'Settings',
+      route: 'settings'
     }
   ]; 
   constructor() { }

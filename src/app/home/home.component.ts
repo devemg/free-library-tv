@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataAdapterService } from '../services/data-adapter/data-adapter.service';
 import { SearchService } from '../services/search/search.service';
-import { ISingleCard } from '../shared-components/single-card/single-card.model';
+import { IHorizontalList } from '../shared-components/horizontal-list/horizontal-list.model';
 
 @Component({
   selector: 'app-home',
@@ -9,18 +9,29 @@ import { ISingleCard } from '../shared-components/single-card/single-card.model'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  searchq1List: ISingleCard[] = [];
-  searchq2List: ISingleCard[] = [];
+  listCards: Array<IHorizontalList> = [];
   constructor(private searchService: SearchService, private adapter: DataAdapterService) { }
 
   ngOnInit(): void {
     this.searchService.search('hp').then((res) => {
-      this.searchq1List = this.adapter.getSingleCardList(res);
+      this.listCards.push({
+        title: 'Harry Potter',
+        items: this.adapter.getSingleCardList(res)
+      });
     })
     .catch((err) => console.error(err)); 
     this.searchService.search('lor').then((res) => {
-      this.searchq2List = this.adapter.getSingleCardList(res);
+      this.listCards.push({
+        title: 'Lord of Rings',
+        items: this.adapter.getSingleCardList(res),
+      });
+    })
+    .catch((err) => console.error(err)); 
+    this.searchService.search('narnia').then((res) => {
+      this.listCards.push({
+        title: 'Narnia',
+        items: this.adapter.getSingleCardList(res),
+      });
     })
     .catch((err) => console.error(err)); 
   }

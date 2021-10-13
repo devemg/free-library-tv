@@ -1,5 +1,8 @@
-<div class="container-card-list">
-    <div class="single-card-container" *ngFor="let item of data">
-        <app-single-card [item]="item"></app-single-card>
+<div *ngIf="data" class="horizontal-container">
+    <h3>{{data.title}}</h3>
+    <div class="container-card-list">
+        <div class="single-card-container" *ngFor="let item of data.items">
+            <app-single-card [item]="item"></app-single-card>
+        </div>
     </div>
 </div>

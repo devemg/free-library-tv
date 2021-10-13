@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ISingleCard } from '../single-card/single-card.model';
+import { IHorizontalList } from './horizontal-list.model';
 
 @Component({
   selector: 'app-horizontal-list',
@@ -7,7 +8,7 @@ import { ISingleCard } from '../single-card/single-card.model';
   styleUrls: ['./horizontal-list.component.scss']
 })
 export class HorizontalListComponent implements OnInit {
-  @Input() data : ISingleCard[] = [];
+  @Input() data : IHorizontalList | undefined;
   constructor() { }
 
   ngOnInit(): void {

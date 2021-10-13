@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { hpSearch } from './dummy-data/harry-potter-search';
 import { LORSearch } from './dummy-data/lord-of-rings';
+import { narniaSearch } from './dummy-data/narnia-search';
 import { ISearchResultModel } from './search.model';
 
 @Injectable({
@@ -25,6 +26,9 @@ export class SearchService {
         break;
         case 'lor': 
           resolve(LORSearch);
+        break;
+        case 'narnia':
+          resolve(narniaSearch);
         break;
         default: 
         reject('Data not found');

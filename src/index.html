@@ -15,7 +15,7 @@
       SpatialNavigation.add('menu', {
           selector: '.menu-container .item-container',
           enterTo: 'last-focused',
-
+          defaultElement: '.item-container',
           // This config specifies which element will be focused next when user
           // press the specified key and intends to leave the current section.
           //
@@ -34,7 +34,7 @@
         });
 
         SpatialNavigation.add('carousel', {
-          selector: '.container-card-list .item-container',
+          selector: '.horizontal-container .item-container',
           enterTo: 'last-focused',
         });
  

@@ -1,2 +1,1 @@
-<app-horizontal-list [data]="searchq1List" ></app-horizontal-list>
-<app-horizontal-list [data]="searchq2List" ></app-horizontal-list>
+<app-horizontal-list *ngFor="let item of listCards" [data]="item" ></app-horizontal-list>

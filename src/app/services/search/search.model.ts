@@ -86,5 +86,7 @@ export interface ISearchItemModel{
     id_scribd?: string[];
     time_facet?: string[];
     time_key?: string[];
+    name?: string;
+    alternate_names?: string[];
 }
 //?: string[];
