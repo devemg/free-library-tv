@@ -12,27 +12,27 @@ export class MenuTvComponent implements OnInit {
     {
       icon: 'emoji_events',
       title: 'Sports',
-      route:'Drama'
+      route:''
     },
     {
       icon: 'movie_creation',
       title: 'Bio',
-      route: 'bio'
+      route: ''
     },
     {
       icon: 'home',
       title: 'Home',
-      route: 'home'
+      route: ''
     },
     {
       icon: 'star',
       title: 'To Read',
-      route:'to-read'
+      route:''
     }, 
     {
       icon: 'settings_suggest',
       title: 'Settings',
-      route: 'settings'
+      route: ''
     }
   ]; 
   constructor(private router: Router) { }
@@ -45,16 +45,15 @@ export class MenuTvComponent implements OnInit {
   }
 
   onFocusMenu(): void {
-    console.log('FIX NEXT MOVEMENT WITH DOWN', this.router.url.includes('detail') ? '@details' : '@carousel');
-    SpatialNavigation.set('menu',{
+    //console.log('FIX NEXT MOVEMENT WITH DOWN', this.router.url.includes('detail') ? '@details' : '@carousel');
+    /*SpatialNavigation.set('menu',{
       leaveFor: {
         left: '',
         right: '',
         up: '',
         down: this.router.url.includes('detail') ? '@details' : '@carousel'
       }
-    });
-    //SpatialNavigation.focus();
+    });*/
   }
 
 }
