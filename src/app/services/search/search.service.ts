@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { dummySearch } from './dummy-data';
+import { hpSearch } from './dummy-data/harry-potter-search';
+import { LORSearch } from './dummy-data/lord-of-rings';
 import { ISearchResultModel } from './search.model';
 
 @Injectable({
@@ -19,7 +19,17 @@ export class SearchService {
    */
   search(value: string): Promise<ISearchResultModel> {
     return new Promise((resolve,reject) => {
-      resolve(dummySearch);
+      switch(value) {
+        case 'hp': 
+          resolve(hpSearch);
+        break;
+        case 'lor': 
+          resolve(LORSearch);
+        break;
+        default: 
+        reject('Data not found');
+        break;
+      }
     });
   }
 

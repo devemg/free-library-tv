@@ -12,7 +12,7 @@ export class DataAdapterService {
   getSingleCardList(searchItems: ISearchResultModel): ISingleCard[] {
     return searchItems.docs.map((element) => ({
       id: element.isbn ? element.isbn[0] : '',
-      image: `${this.URL_IMAGES}/id/${element.cover_i}.jpg`,
+      image: element.cover_i ? `${this.URL_IMAGES}/id/${element.cover_i}.jpg` : undefined,
       title: element.title ? element.title : 'default title',
       size: '',
     }));

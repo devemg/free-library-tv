@@ -11,12 +11,18 @@ import { ISingleCard } from '../shared-components/single-card/single-card.model'
 export class HomeComponent implements OnInit {
 
   searchq1List: ISingleCard[] = [];
+  searchq2List: ISingleCard[] = [];
   constructor(private searchService: SearchService, private adapter: DataAdapterService) { }
 
   ngOnInit(): void {
-    this.searchService.search('').then((res) => {
+    this.searchService.search('hp').then((res) => {
       this.searchq1List = this.adapter.getSingleCardList(res);
-    }); 
+    })
+    .catch((err) => console.error(err)); 
+    this.searchService.search('lor').then((res) => {
+      this.searchq2List = this.adapter.getSingleCardList(res);
+    })
+    .catch((err) => console.error(err)); 
   }
 
 }

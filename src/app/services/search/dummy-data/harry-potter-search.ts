@@ -1,6 +1,6 @@
-import { ISearchResultModel } from "./search.model";
+import { ISearchResultModel } from "../search.model";
 
-export const dummySearch: ISearchResultModel = {
+export const hpSearch: ISearchResultModel = {
     "numFound": 1428,
     "start": 0,
     "numFoundExact": true,

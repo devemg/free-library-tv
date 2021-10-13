@@ -79,5 +79,12 @@ export interface ISearchItemModel{
     ddc_sort?: string; 
     availability?: any;
     id_british_national_bibliography?: string[];
+    time?: string[];
+    subtitle?: string;
+    id_bcid?: string[];
+    id_nla?: string[];
+    id_scribd?: string[];
+    time_facet?: string[];
+    time_key?: string[];
 }
 //?: string[];
