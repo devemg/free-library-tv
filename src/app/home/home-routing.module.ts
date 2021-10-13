@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home.component';
 
 const routes: Routes = [
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'to-read',
     component: HomeComponent
+  },
+  {
+    path:'details/:id',
+    component: DetailsComponent
   }
 ];
 

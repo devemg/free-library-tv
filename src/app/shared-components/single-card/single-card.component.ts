@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ISingleCard } from './single-card.model';
 
 @Component({
@@ -8,12 +9,16 @@ import { ISingleCard } from './single-card.model';
 })
 export class SingleCardComponent implements OnInit {
   @Input() item: ISingleCard | undefined;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   goToDetail(): void {
-    console.log('GO TO DETAIL OF ', this.item?.title);
+    if (this.item) {
+      this.router.navigate(['details', this.item?.id]);
+    } else {
+      console.log('item is undefined');
+    }
   }
 }
